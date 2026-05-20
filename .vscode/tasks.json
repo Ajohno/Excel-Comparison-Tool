@@ -16,7 +16,7 @@
         },
         // Run the Excel Comparison Tool
         {
-            "label": "Run Excel Comparison Tool",
+            "label": "Run Comparison Terminal",
             "type": "shell",
             "command": "python3.13.exe",
             "options": {
@@ -27,6 +27,32 @@
             "args": [
                 "excel_cleaner_layered.py"
             ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        // Run the GUI application
+        {
+            "label": "Run GUI App",
+            "type": "shell",
+            "command": "python3.13.exe",
+            "args": [
+                "-m",
+                "app.main"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "statusbar": {
+                    "label": "$(play) Run GUI App"
+                }
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
