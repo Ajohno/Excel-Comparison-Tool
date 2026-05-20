@@ -1,6 +1,10 @@
 import pandas as pd
 import os
 
+from core.text_cleaning import clean_value
+from core.comparison import compare_dataframes
+from core.io_utils import file_exists, load_excel_file, write_results_to_excel
+
 # Threshold for fuzzy matching (0-100). Adjust as needed.
 FUZZY_THRESHOLD = 50
 

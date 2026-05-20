@@ -1,5 +1,8 @@
 import pandas as pd
 import os
+from core.text_cleaning import clean_value, fuzzy_score
+
+FUZZY_THRESHOLD = 50
 
 def create_clean_columns(df1, df2, file1_columns, file2_columns):
     num_layers = len(file1_columns)
